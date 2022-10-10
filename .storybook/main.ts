@@ -1,6 +1,6 @@
 // Imports the Storybook's configuration and options API
 import type { StorybookConfig, Options } from '@storybook/core-common';
-import type { Configuration, RuleSetRule } from 'webpack';
+import type { Configuration, RuleSetRule, ResolvePluginInstance } from 'webpack';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import { logger } from '@storybook/node-logger';
 import { filterByLoaderName } from './utils/webpack-module-rules';
@@ -41,7 +41,7 @@ export const config: StorybookConfig = {
       configFile: './tsconfig.base.json',
       extensions: resolve.extensions,
       mainFields: resolve.mainFields as string[],
-    });
+      }) as "..." | ResolvePluginInstance;
 
     resolve.plugins
       ? resolve.plugins.push(tsPaths)
