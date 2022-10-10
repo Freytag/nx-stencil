@@ -14,7 +14,18 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-stencil/core-components": ["dist/libs/core-components"],
+      "@nx-stencil/core-components/*": [
+        "dist/libs/core-components/dist/components/*"
+      ],
+      "@nx-stencil/core-components/loader": ["dist/libs/core-components/loader"]
+    }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp"],
+  "references": [
+    {
+      "path": "./.storybook/tsconfig.json"
+    }
+  ]
 }
