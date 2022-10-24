@@ -1,4 +1,4 @@
-
+Project generated for [Stencil: Storybook Unable to compile Typescript #820](https://github.com/nxext/nx-extensions/issues/820#issuecomment-1279225691)
 
 # NxStencil
 
